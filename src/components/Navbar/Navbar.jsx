@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import "./Navbar.scss";
 
 
@@ -42,7 +43,12 @@ const current_user={
         <div className="container">
 
             <div className="logo">
+
+                {/*  Linking the  Fiver Text To HomePage      */}
+                <Link to="/" className='link'>
                 <span className='text'>Fiver</span>
+                </Link>
+
                 <span className='dot'>.</span>
             </div>
 
@@ -68,14 +74,13 @@ const current_user={
                     <div className="options">
                     {current_user?.isSeller &&(
                         <>
-                        <span>Gigs</span>
-                        <span>Add New Gig</span>
+                        <Link to="/myGigs" className='link'>Gigs</Link>
+                        <Link to="/gigs" className='link'>Add New Gig</Link>
                         </>
                     )}
-                        <span>Orders</span>
-                        <span>Messages</span>
-                        <span>LogOut</span>
-
+                        <Link to="/orders" className='link'>Orders</Link>
+                        <Link to="/messages" className='link'>Messages</Link>
+                        <Link to="/" className='link'>LogOut</Link>
                     </div>}
                 </div>
                )}
