@@ -1,4 +1,5 @@
-import "./App.css"
+import "./App.css";
+// import "./App.scss";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,7 +16,8 @@ import Gigs from "./pages/gigs/Gigs";
 import Orders from "./pages/orders/Orders";
 import Gig from "./pages/gig/Gig";
 import Register from "./pages/register/Register";
-import Login from "./pages/login/Login"
+import Login from "./pages/login/Login";
+import Add from "./pages/add/Add";
 
 
 function App() {
